@@ -906,6 +906,7 @@
       transition:all .3s;
     }
     .social-btn:hover { background:var(--red); }
+    .social-btn.ig:hover { background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
     .footer-col h4 {
       font-size:.8rem;
       font-weight:700;
@@ -970,6 +971,40 @@
       0%,100% { box-shadow:0 6px 28px rgba(37,211,102,.5); }
       50%      { box-shadow:0 6px 44px rgba(37,211,102,.75), 0 0 0 12px rgba(37,211,102,.1); }
     }
+
+    /* Instagram float */
+    .ig-float {
+      position:fixed;
+      bottom:102px; right:30px;
+      z-index:9998;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:8px;
+    }
+    .ig-tooltip {
+      background:#fff;
+      color:var(--text);
+      font-size:.76rem;
+      font-weight:700;
+      padding:7px 13px;
+      border-radius:10px;
+      box-shadow:0 4px 18px rgba(0,0,0,.12);
+      white-space:nowrap;
+      display:none;
+    }
+    .ig-float:hover .ig-tooltip { display:block; }
+    .ig-bubble {
+      width:52px; height:52px;
+      border-radius:50%;
+      background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+      color:#fff;
+      display:grid; place-items:center;
+      font-size:1.4rem;
+      box-shadow:0 6px 24px rgba(188,24,136,.45);
+      transition:transform .3s, box-shadow .3s;
+    }
+    .ig-bubble:hover { transform:scale(1.12); box-shadow:0 10px 32px rgba(188,24,136,.65); }
 
     /* Scroll to top */
     #scroll-top {
@@ -1062,6 +1097,7 @@
 
       /* Floating buttons */
       .wsp-float  { bottom:18px; right:18px; }
+      .ig-float   { bottom:88px; right:18px; }
       #scroll-top { bottom:18px; left:18px; }
     }
 
@@ -1685,6 +1721,9 @@
           <a href="tel:+542972414034" class="social-btn" aria-label="Teléfono">
             <i class="fas fa-phone"></i>
           </a>
+          <a href="https://www.instagram.com/ailinco.sma/" target="_blank" class="social-btn ig" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
       </div>
 
@@ -1720,6 +1759,14 @@
     </div>
   </div>
 </footer>
+
+<!-- ================= INSTAGRAM FLOAT ================= -->
+<div class="ig-float">
+  <div class="ig-tooltip">Seguinos en Instagram</div>
+  <a href="https://www.instagram.com/ailinco.sma/" target="_blank" class="ig-bubble" aria-label="Instagram Ailinco">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
 
 <!-- ================= WHATSAPP FLOAT ================= -->
 <div class="wsp-float">
